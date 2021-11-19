@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("buscar")
 public class AmigoInvisibleController {
 	
 	private List<String> lista = new ArrayList<>();
