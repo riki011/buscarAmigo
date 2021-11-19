@@ -34,7 +34,7 @@ public class AmigoInvisibleController {
 	}
 
 
-	@GetMapping("/{nombre}")
+	@GetMapping("/buscar/{nombre}")
 	public ResponseEntity<Object> amigo(@PathVariable("nombre") String nombre){
 		
 		if(lista.size() == 0) {
