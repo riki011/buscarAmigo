@@ -10,10 +10,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
+@RequestMapping("buscar")
 public class AmigoInvisibleController {
 	
 	private List<String> lista = new ArrayList<>();
@@ -27,10 +29,13 @@ public class AmigoInvisibleController {
 
 	}
 
+	@GetMapping("/")
+	public ResponseEntity<Object> index(){
+		return new ResponseEntity<>("BIENVENIDO",HttpStatus.OK);
+	}
 
 
-
-	@GetMapping("/buscarAmigo/{nombre}")
+	@GetMapping("/{nombre}")
 	public ResponseEntity<Object> amigo(@PathVariable("nombre") String nombre){
 		
 		if(lista.size() == 0) {
