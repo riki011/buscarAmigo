@@ -40,9 +40,9 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
-
+ 
  <build>
+<defaultGoal>install</defaultGoal>
   <plugins>
     <plugin>
       <!-- Build an executable JAR -->
